@@ -10,8 +10,18 @@ while True:
             task = tasks.append(user_task)
             print(f"Dodano zadanie. Twoja lista zadań {tasks}")
         elif user_input == 2:
+            if not tasks:
+                print("Nie ma żadnych zadań.")
+
+            for index, task in enumerate(tasks):
+                print(f"{index}. {task}")
+
             print(f"Twoja lista zadań {tasks}")
+
+#Zrobić żeby wykrywało, że lista jest pusta, a pożniej zrobić zadnie z chata żeby móc usuwać zadania
+
         elif user_input == 3:
+            print("Zamykam program...")
             break
         else:
             print("Nie ma takiego zadnia!")
